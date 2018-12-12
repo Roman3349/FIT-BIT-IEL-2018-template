@@ -1,0 +1,30 @@
+\section{Příklad č.~1}
+
+\subsection{Zadání}
+
+Stanovte napětí $U_{R3}$ a proud $I_{R3}$.
+Použijte metodu postupného zjednodušování obvodu. \\
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		sk. & $U_{1}~[V]$ & $U_{2}~[V]$ & $R_{1}~[\Omega]$ & $R_{2}~[\Omega]$ & $R_{3}~[\Omega]$ & $R_{4}~[\Omega]$ & $R_{5}~[\Omega]$ & $R_{6}~[\Omega]$ & $R_{7}~[\Omega]$ & $R_{8}~[\Omega]$ \\
+		\hline
+		C & 100 & 80 & 450 & 810 & 190 & 220 & 220 & 720 & 260 & 180 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{center}
+	\begin{circuitikz}
+		\draw (1, 0) -- (0, 0) to[dcvsource=$U_{1}$] (0, -2) to[dcvsource=$U_{2}$] (0, -4) -- (2, -4);
+		\draw (1, 0) to[short,*-] (1, -1) to[R=$R_{3}$]  (5, -1) to[R=$R_{6}$, -*] (7, -1);
+		\draw (1, 0) to[short,*-] (1, 1) to[R=$R_{1}$] (3, 1) to[R=$R_{2}$] (5, 1) to[R=$R_{5}$] (7, 1) -- (7, -4) -- (4, -4);
+		\draw (5, 1) to[R=$R_{4}$, *-*] (5, -1);
+		\draw (4, -4) to[short, *-] (4, -3) to[R=$R_{7}$] (2, -3) to[short, -*] (2, -4);
+		\draw (4, -4) to[short, *-] (4, -5) to[R=$R_{8}$] (2, -5) to[short, -*] (2, -4);
+	\end{circuitikz}
+\end{center}
+
+\subsection{Řešení}

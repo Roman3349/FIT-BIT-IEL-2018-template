@@ -1,0 +1,26 @@
+\section{Příklad č.~5}
+
+\subsection{Zadání}
+
+Sestavte diferenciální rovnici popisující chování obvodu na obrázku, dále ji upravte dosazením hodnot parametrů.
+Vypočítejte analytické řešení $u_{C} = f(t)$. \\
+Proveďte kontrolu výpočtu dosazením do sestavené diferenciální rovnice.
+
+\begin{minipage}{0.5\textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		sk. & $C~[F]$ & $R~[\Omega]$ & $u_{Ć}(0)~[V]$ \\
+		\hline
+		A & 50 & 10 & 9 \\
+		\hline
+	\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\centering
+	\begin{circuitikz}
+		\draw (0, 0) to[R=$R$] (2, 0) to[C=$C$, v=$u_{C}$] (2, -4) -- (0, -4) -- (0, 0);
+	\end{circuitikz}
+\end{minipage}
+
+\subsection{Řešení}
